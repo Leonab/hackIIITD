@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>jghjg</title>
+    <title>Sceptre</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="img/favicon.png" type="image/icon">
@@ -32,7 +32,12 @@
 
     <div class="header">
         <div class="container intro text-center">
-        
+            <div class="left col-md-4">
+               Left Section 
+            </div>
+            <fiv class="right col-md-8">
+                Right Section
+            </fiv>
         </div>
     </div>
     <div class="footer">
