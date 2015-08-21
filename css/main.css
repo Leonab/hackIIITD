@@ -1,0 +1,15 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar.navbar-fixed-top {
+	border-bottom: 5px solid orange;
+}
+
+.intro {
+	height: 80%;
+	background-color: green;
+	margin-top: 30px;
+}
