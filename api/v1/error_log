@@ -1,0 +1,75 @@
+[21-Aug-2015 17:32:00 America/Chicago] PHP Warning:  require(connect.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:00 America/Chicago] PHP Warning:  require(connect.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:00 America/Chicago] PHP Fatal error:  require(): Failed opening required 'connect.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:40 America/Chicago] PHP Warning:  require(connect.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:40 America/Chicago] PHP Warning:  require(connect.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:40 America/Chicago] PHP Fatal error:  require(): Failed opening required 'connect.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:48 America/Chicago] PHP Warning:  require(connect.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:48 America/Chicago] PHP Warning:  require(connect.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:32:48 America/Chicago] PHP Fatal error:  require(): Failed opening required 'connect.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 2
+[21-Aug-2015 17:34:12 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:12 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:12 America/Chicago] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:34 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:34 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:34 America/Chicago] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:36 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:36 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:36 America/Chicago] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:38 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:38 America/Chicago] PHP Warning:  require(Slim/Slim.php): failed to open stream: No such file or directory in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 17:34:38 America/Chicago] PHP Fatal error:  require(): Failed opening required 'Slim/Slim.php' (include_path='.:/opt/php54/lib/php') in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 3
+[21-Aug-2015 18:38:16 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Route callable must be callable' in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php:178
+Stack trace:
+#0 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php(107): Slim\Route->setCallable('insertUpdate')
+#1 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(443): Slim\Route->__construct('/court/add', 'insertUpdate', true)
+#2 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(485): Slim\Slim->mapRoute(Array)
+#3 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php(9): Slim\Slim->post('/court/add', 'insertUpdate')
+#4 {main}
+  thrown in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php on line 178
+[21-Aug-2015 18:41:15 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Route callable must be callable' in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php:178
+Stack trace:
+#0 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php(107): Slim\Route->setCallable('insertUpdate')
+#1 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(443): Slim\Route->__construct('/court/add', 'insertUpdate', true)
+#2 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(485): Slim\Slim->mapRoute(Array)
+#3 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php(9): Slim\Slim->post('/court/add', 'insertUpdate')
+#4 {main}
+  thrown in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php on line 178
+[21-Aug-2015 18:41:18 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Route callable must be callable' in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php:178
+Stack trace:
+#0 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php(107): Slim\Route->setCallable('insertUpdate')
+#1 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(443): Slim\Route->__construct('/court/add', 'insertUpdate', true)
+#2 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(485): Slim\Slim->mapRoute(Array)
+#3 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php(9): Slim\Slim->post('/court/add', 'insertUpdate')
+#4 {main}
+  thrown in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php on line 178
+[21-Aug-2015 18:42:25 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Route callable must be callable' in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php:178
+Stack trace:
+#0 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php(107): Slim\Route->setCallable('insertUpdate')
+#1 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(443): Slim\Route->__construct('/court/add', 'insertUpdate', true)
+#2 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(485): Slim\Slim->mapRoute(Array)
+#3 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php(9): Slim\Slim->post('/court/add', 'insertUpdate')
+#4 {main}
+  thrown in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php on line 178
+[21-Aug-2015 18:47:32 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Route callable must be callable' in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php:178
+Stack trace:
+#0 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php(107): Slim\Route->setCallable('insertUpdate')
+#1 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(443): Slim\Route->__construct('/court/add', 'insertUpdate', true)
+#2 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(485): Slim\Slim->mapRoute(Array)
+#3 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php(9): Slim\Slim->post('/court/add', 'insertUpdate')
+#4 {main}
+  thrown in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php on line 178
+[21-Aug-2015 18:49:13 America/Chicago] PHP Fatal error:  Call to a member function post() on a non-object in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 34
+[21-Aug-2015 18:53:17 America/Chicago] PHP Fatal error:  Call to a member function post() on a non-object in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 35
+[21-Aug-2015 18:56:19 America/Chicago] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Route callable must be callable' in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php:178
+Stack trace:
+#0 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php(107): Slim\Route->setCallable(NULL)
+#1 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(443): Slim\Route->__construct('/court/add', NULL, true)
+#2 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Slim.php(485): Slim\Slim->mapRoute(Array)
+#3 /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php(8): Slim\Slim->post('/court/add', NULL)
+#4 {main}
+  thrown in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/Slim/Route.php on line 178
+[21-Aug-2015 20:03:43 America/Chicago] PHP Fatal error:  Cannot redeclare getAllLawyerCases() (previously declared in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php:62) in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 98
+[21-Aug-2015 20:09:16 America/Chicago] PHP Fatal error:  Cannot redeclare getAllLawyerCases() (previously declared in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php:62) in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 98
+[21-Aug-2015 20:10:28 America/Chicago] PHP Fatal error:  Cannot redeclare getAllLawyerCases() (previously declared in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php:62) in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 98
+[21-Aug-2015 20:10:37 America/Chicago] PHP Fatal error:  Cannot redeclare getAllLawyerCases() (previously declared in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php:62) in /home2/yogesh/public_html/manrajsingh.in/hackathon/v1/index.php on line 98
