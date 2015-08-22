@@ -75,6 +75,23 @@
             <div class="container intro-body">
                 <div class="new-msg col-md-12">
                     New ones:
+
+                    <?php
+                $url = "http://manrajsingh.in/hackathon/v1/court/cases";
+                $json = file_get_contents($url);
+                $json_data = json_decode($json, true);
+                $LAWYER_ID =  isset($_GET['lawyer_id']) ? $_GET['lawyer_id'] : -1;
+                foreach($json_data as $val) 
+                {
+                    if ($LAWYER_ID != -1 && $val['lawyer_id'] != $LAWYER_ID)
+                        continue;
+                    echo "<div class=\"bs-callout bs-callout-warning\" id=\"callout-modal-accessibility\">";
+                    echo "<a href=\"timeline.php?case_id=".$val['id']."\"><h4>".$val['description']."</h4></a>";
+                    echo "<p>".$val['lastStatus']."</p>";
+                    echo "</div>";
+                }
+            ?>
+                    
                 </div>
                 <div class="old-msg col-md-12">
                     Old ones
