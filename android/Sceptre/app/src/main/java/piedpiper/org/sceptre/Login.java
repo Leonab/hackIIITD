@@ -4,6 +4,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.List;
+
+import piedpiper.org.sceptre.api.model.Lawyer;
+import piedpiper.org.sceptre.async.ClientServiceProviderInvoker;
 
 
 public class Login extends ActionBarActivity {
@@ -12,6 +18,24 @@ public class Login extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView textView = (TextView)findViewById(R.id.textView);
+        CourtServiceProvider courtServiceProvider=null;
+        try {
+            ClientServiceProviderInvoker clientServiceProviderInvoker = new ClientServiceProviderInvoker(this);
+            clientServiceProviderInvoker.execute();
+            /*courtServiceProvider = new CourtServiceProvider();
+            System.out.println("********************************");
+            List<Lawyer> lawyers = courtServiceProvider.getAllLawyersOfCourt();
+            String allNames = "";
+            for(Lawyer lawyer:lawyers)
+                allNames +=lawyer.getName();
+            textView.setText(allNames);*/
+        } catch(Exception ex){
+            ex.printStackTrace();
+;
+        }
+
+
     }
 
     @Override
