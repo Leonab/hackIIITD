@@ -4,6 +4,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import piedpiper.org.sceptre.async.CourtServiceGetAllCases;
+import piedpiper.org.sceptre.async.CourtServiceProviderInvoker;
 
 
 public class Login extends ActionBarActivity {
@@ -12,6 +16,34 @@ public class Login extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        TextView textView = (TextView)findViewById(R.id.textView);
+        CourtServiceProvider courtServiceProvider=null;
+        try {
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    CourtServiceGetAllCases courtServiceGetAllCases = new CourtServiceGetAllCases(Login.this);
+                    courtServiceGetAllCases.execute();
+                }
+            };
+            new Thread(runnable).start();
+
+
+//            CourtServiceProviderInvoker courtServiceProviderInvoker = new CourtServiceProviderInvoker(this);
+//            courtServiceProviderInvoker.execute();
+            /*courtServiceProvider = new CourtServiceProvider();
+            System.out.println("********************************");
+            List<Lawyer> lawyers = courtServiceProvider.getAllLawyersOfCourt();
+            String allNames = "";
+            for(Lawyer lawyer:lawyers)
+                allNames +=lawyer.getName();
+            textView.setText(allNames);*/
+        } catch(Exception ex){
+            ex.printStackTrace();
+;
+        }
+
+
     }
 
     @Override
