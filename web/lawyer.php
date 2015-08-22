@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-md-4 info">
                             <div class="info-area">
-                                Info aegi idhar, sabr rakh !!
+                                Other relavent  info !
                             </div>
                         </div>
                 </div>
