@@ -9,6 +9,7 @@ import android.widget.TextView;
 import piedpiper.org.sceptre.async.CourtServiceAddCase;
 import piedpiper.org.sceptre.async.CourtServiceGetAllCases;
 import piedpiper.org.sceptre.async.CourtServiceProviderInvoker;
+import piedpiper.org.sceptre.async.LawyerGetAllClients;
 
 
 public class Login extends ActionBarActivity {
@@ -28,8 +29,10 @@ public class Login extends ActionBarActivity {
                 }
             };
             new Thread(runnable).start();
-            CourtServiceAddCase addCase = new CourtServiceAddCase(this);
-            addCase.execute("This case needs review","The latest status of the case","1","1","0");
+            //LawyerGetAllClients lawyerGetAllClients = new LawyerGetAllClients(this);
+//            lawyerGetAllClients.execute(1);
+//            CourtServiceAddCase addCase = new CourtServiceAddCase(this);
+//            addCase.execute("This case needs review","The latest status of the case","1","1","0");
 
 //            CourtServiceProviderInvoker courtServiceProviderInvoker = new CourtServiceProviderInvoker(this);
 //            courtServiceProviderInvoker.execute();
