@@ -63,25 +63,32 @@ a {
     border-top: 1px solid grey;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
-    padding: 20px 0;
+    padding: 20px 0 30px;
     border-bottom: 5px solid red;
 }
 
-.descrip {
+.dates {
     height: 50%;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
     padding: 20px 0;
 }
 
-.lawyer {
+.associated_case_id {
+    height: 50%;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    padding: 20px 0;
+}
+
+.notes {
     height: 30%;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
     padding: 20px 0;
 }
 
-.date  {
+.status  {
     height: 10%;
     border-bottom: 1px solid grey;
     border-left: 1px solid grey;
@@ -91,10 +98,6 @@ a {
 
 .extra-padding {
     padding: 5px 20px;
-}
-
-.btn-default {
-    padding-top: 10px;
 }
 
 /*End portion*/

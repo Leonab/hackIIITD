@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/case.css">
+    <link rel="stylesheet" href="css/hearing.css">
     <link rel="stylesheet" href="css/md-buttons.css">
     <link rel="stylesheet" href="css/bootstrap.vertical-tabs.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -32,27 +32,34 @@
 
     <div class="intro text-center">
         <div class="new-case">
-            REGISTER A NEW CASE
+            ADD NEW HEARING
         </div>
 
-        <div class="descrip">
-            Enter the description regarding the case
+        <div class="associated_case_id">
+            Associated Case ID with the case
+            <div class="extra-padding">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+        </div>
+
+        <div class="dates">
+            Next hearing date (Timestamp)
+            <div class="extra-padding">
+                <textarea class="form-control" rows="1"></textarea>
+            </div>
+        </div>
+
+        <div class="notes">
+            Any notes you want to give
             <div class="extra-padding">
                 <textarea class="form-control" rows="3"></textarea>
             </div>
         </div>
 
-        <div class="lawyer">
-            Lawyer you want to give the case
+        <div class="status">
+            Current status
             <div class="extra-padding">
                 <textarea class="form-control" rows="2"></textarea>
-            </div>
-        </div>
-
-        <div class="date">
-            Date before you need the required documents
-            <div class="extra-padding">
-                <textarea class="form-control" rows="1"></textarea>
             </div>
         </div>
         <button type="button" class="btn btn-default">Submit</button>
