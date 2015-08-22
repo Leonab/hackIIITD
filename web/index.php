@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/md-buttons.css">
+    <link rel="stylesheet" href="css/tabs.css">
     <link rel="stylesheet" href="css/bootstrap.vertical-tabs.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -29,51 +30,48 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <?php include("views/nav.php");?>
-
-        <div class="header">
-            <div class="container intro">
-                <div class="left col-md-4 ">
-                    <div class="col-xs-8 text-center">
-                        <!-- required for floating -->
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs tabs-left">
-                        <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-      </span>
-    </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
-
-                            <!-- <li class="active"><a href="#home" data-toggle="tab">Home</a></li> -->
-                            <br><br>
-                            <li><a href="#profile" data-toggle="tab">Nikhil Kumar</a></li>
-                            <li><a href="#messages" data-toggle="tab">Aditya Gupta</a></li>
-                            <li><a href="#settings" data-toggle="tab">Rahul Sharma</a></li>
-                            <li><a href="#settings" data-toggle="tab">Manish Kumar</a></li>
-                            <li><a href="#settings" data-toggle="tab">Arpit aggarwal</a></li>
-                            <li><a href="#settings" data-toggle="tab">Kuldeep Singh</a></li>
-                            <li><a href="#settings" data-toggle="tab">Hwllo world</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="right col-md-8">
-                    <ul>
-                        <li></li>
-                    </ul>
-                </div>
+    <div class="header">
+        <div class="container intro">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="?lawyer_id=-1">All</a></li>
+                    <?php 
+                        $url = "http://manrajsingh.in/hackathon/v1/court/lawyers";
+                        $json = file_get_contents($url);
+                        $json_data = json_decode($json, true);
+                        foreach($json_data as $val)
+                        {
+                            echo "<li><a href=\"?lawyer_id=".$val['id']."\">Lawyer #".$val['id']."</a></li>";
+                        }
+                    ?>
+                </ul>
             </div>
+            <?php
+                $url = "http://manrajsingh.in/hackathon/v1/court/cases";
+                $json = file_get_contents($url);
+                $json_data = json_decode($json, true);
+                $LAWYER_ID =  isset($_GET['lawyer_id']) ? $_GET['lawyer_id'] : -1;
+                foreach($json_data as $val) 
+                {
+                    if ($LAWYER_ID != -1 && $val['lawyer_id'] != $LAWYER_ID)
+                        continue;
+                    echo "<div class=\"bs-callout bs-callout-warning\" id=\"callout-modal-accessibility\">";
+                    echo "<a href=\"timeline.php?case_id=".$val['id']."\"><h4>".$val['description']."</h4></a>";
+                    echo "<p>".$val['lastStatus']."</p>";
+                    echo "</div>";
+                }
+            ?>
         </div>
-
-        <?php include("views/footer.php");?>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>
+    </div>
+    <?php include("views/footer.php");?>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-        </script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/md-buttons.js"></script>
+    </script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/md-buttons.js"></script>
 </body>
 
 </html>
