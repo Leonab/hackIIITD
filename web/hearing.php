@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/hearing.css">
     <link rel="stylesheet" href="css/md-buttons.css">
+    <link rel="stylesheet" href="css/bootstrap.vertical-tabs.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -28,50 +28,44 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    
     <?php include("views/nav.php");?>
 
-    <div class="header">
+    <div class="intro text-center">
+        <div class="new-case">
+            ADD NEW HEARING
+        </div>
 
-        <div class="container intro">
-            <ul class="timeline">
-          <?php
-            $url = "http://manrajsingh.in/hackathon/v1/department/taskscase?case_id=" . $_GET['case_id'];
-            $json = file_get_contents($url);
-            $json_data = json_decode($json, true);
-            foreach($json_data as $val)
-            {
-              ?>
-                <li <?php if ($val['requirements'] == null) echo "class=\"timeline-inverted\""; ?>>
-                  <div class="timeline-badge warning"><i class="glyphicon"></i></div>
-                  <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <?php echo date('m/d/Y', $val['deadline']); ?></small></p>
-                  </div>
-                  <div class="timeline-body">
-                    <p><?php echo $val['requirements']; ?></p>
-                  </div>
-                </div>
-                </li>
-              <?php
-            }
-          ?>
-        <!--<li class="timeline-inverted">
-          <div class="timeline-badge danger"><i class="glyphicon"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">wsdk swkjnc kwdsnk ,sk</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22 Aug, 2015</small></p>
+        <div class="associated_case_id">
+            Associated Case ID with the case
+            <div class="extra-padding">
+                <textarea class="form-control" rows="1"></textarea>
             </div>
-            <div class="timeline-body">
-              <p>kcj djks sjv kjs skj sds.</p>
+        </div>
+
+        <div class="dates">
+            Next hearing date (Timestamp)
+            <div class="extra-padding">
+                <textarea class="form-control" rows="1"></textarea>
             </div>
-          </div>
-        </li>-->
-    </ul>
-    	</div>
+        </div>
+
+        <div class="notes">
+            Any notes you want to give
+            <div class="extra-padding">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+
+        <div class="status">
+            Current status
+            <div class="extra-padding">
+                <textarea class="form-control" rows="2"></textarea>
+            </div>
+        </div>
+        <button type="button" class="btn btn-default">Submit</button>
     </div>
-	<?php include("views/footer.php");?>    
+
+    <?php include("views/footer.php");?>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
