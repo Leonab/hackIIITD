@@ -14,15 +14,14 @@ import piedpiper.org.sceptre.service.CourtService;
 /**
  * Created by OPSKMC on 8/22/2015.
  */
-public class ClientServiceProviderInvoker extends AsyncTask<String,Void,String>{
+public class CourtServiceProviderInvoker extends AsyncTask<String,Void,String>{
     Activity activity;
-    public ClientServiceProviderInvoker(Activity activity){
+    public CourtServiceProviderInvoker(Activity activity){
         this.activity = activity;
     }
     @Override
     protected String doInBackground(String... strings) {
         CourtServiceProvider courtServiceProvider = new CourtServiceProvider();
-        System.out.println("********************************");
         List<Lawyer> lawyers = courtServiceProvider.getAllLawyersOfCourt();
         System.out.println(lawyers.size());
         String allNames = "";

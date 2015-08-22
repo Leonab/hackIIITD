@@ -6,10 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import java.util.List;
-
-import piedpiper.org.sceptre.api.model.Lawyer;
-import piedpiper.org.sceptre.async.ClientServiceProviderInvoker;
+import piedpiper.org.sceptre.async.CourtServiceGetAllCases;
+import piedpiper.org.sceptre.async.CourtServiceProviderInvoker;
 
 
 public class Login extends ActionBarActivity {
@@ -21,8 +19,18 @@ public class Login extends ActionBarActivity {
         TextView textView = (TextView)findViewById(R.id.textView);
         CourtServiceProvider courtServiceProvider=null;
         try {
-            ClientServiceProviderInvoker clientServiceProviderInvoker = new ClientServiceProviderInvoker(this);
-            clientServiceProviderInvoker.execute();
+            Runnable runnable = new Runnable() {
+                @Override
+                public void run() {
+                    CourtServiceGetAllCases courtServiceGetAllCases = new CourtServiceGetAllCases(Login.this);
+                    courtServiceGetAllCases.execute();
+                }
+            };
+            new Thread(runnable).start();
+
+
+//            CourtServiceProviderInvoker courtServiceProviderInvoker = new CourtServiceProviderInvoker(this);
+//            courtServiceProviderInvoker.execute();
             /*courtServiceProvider = new CourtServiceProvider();
             System.out.println("********************************");
             List<Lawyer> lawyers = courtServiceProvider.getAllLawyersOfCourt();

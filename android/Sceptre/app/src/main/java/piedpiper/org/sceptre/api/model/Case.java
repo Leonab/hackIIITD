@@ -7,10 +7,8 @@ package piedpiper.org.sceptre.api.model;
     public class Case {
         private int id;
         private String description;
-        private Lawyer lawyer;
-        private Department department;
-//        @OneToMany
-//        private Collection<Hearing> hearings;
+        private int lawyer_id;
+        private int  department_id;
         private String lastStatus;
 
     public int getId() {
@@ -29,12 +27,20 @@ package piedpiper.org.sceptre.api.model;
         this.description = description;
     }
 
-    public Lawyer getLawyer() {
-        return lawyer;
+    public int getLawyer_id() {
+        return lawyer_id;
     }
 
-    public void setLawyer(Lawyer lawyer) {
-        this.lawyer = lawyer;
+    public void setLawyer_id(int lawyer_id) {
+        this.lawyer_id = lawyer_id;
+    }
+
+    public int getDepartment_id() {
+        return department_id;
+    }
+
+    public void setDepartment_id(int department_id) {
+        this.department_id = department_id;
     }
 
     public String getLastStatus() {

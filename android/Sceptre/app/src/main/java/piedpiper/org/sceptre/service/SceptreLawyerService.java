@@ -8,5 +8,5 @@ import piedpiper.org.sceptre.api.model.Case;
  * Created by OPSKMC on 8/22/2015.
  */
 public interface SceptreLawyerService {
-  //  List<Case> getAllCasesForLawyer(@I)
+    List<Case> getAllCasesForLawyer();
 }
