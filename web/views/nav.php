@@ -5,7 +5,6 @@
                 <span class="sr-only">Toggle navigation</span>
             </button>
             <a class="logo navbar-brand" href="#" title="">
-                <img src="img/logo.png">
                 SCEPTRE
             </a>
         </div>

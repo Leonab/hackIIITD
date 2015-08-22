@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/md-buttons.css">
+    <link rel="stylesheet" href="css/bootstrap.vertical-tabs.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -27,56 +28,52 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    
     <?php include("views/nav.php");?>
 
-    <div class="header">
-        <div class="container intro text-center">
-            <div class="left col-md-4">
-               Left Section 
-            </div>
-            <fiv class="right col-md-8">
-                Right Section
-            </fiv>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="container end">
-            <img src="img/tedxmsit-small.png">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <div class="social-links-bottom">
-                <ul class="list-inline">
-                    <li>
-                        <a href="">
-                            <i class="fa fa-facebook fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-twitter fa-2x"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-youtube fa-2x"></i>
-                        </a>
-                    </li>
-                </ul>
+        <div class="header">
+            <div class="container intro">
+                <div class="left col-md-4 ">
+                    <div class="col-xs-8 text-center">
+                        <!-- required for floating -->
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs tabs-left">
+                        <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
+                            <!-- <li class="active"><a href="#home" data-toggle="tab">Home</a></li> -->
+                            <br><br>
+                            <li><a href="#profile" data-toggle="tab">Nikhil Kumar</a></li>
+                            <li><a href="#messages" data-toggle="tab">Aditya Gupta</a></li>
+                            <li><a href="#settings" data-toggle="tab">Rahul Sharma</a></li>
+                            <li><a href="#settings" data-toggle="tab">Manish Kumar</a></li>
+                            <li><a href="#settings" data-toggle="tab">Arpit aggarwal</a></li>
+                            <li><a href="#settings" data-toggle="tab">Kuldeep Singh</a></li>
+                            <li><a href="#settings" data-toggle="tab">Hwllo world</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right col-md-8">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/md-buttons.js"></script>
+
+        <?php include("views/footer.php");?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+        </script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/md-buttons.js"></script>
 </body>
 
 </html>
