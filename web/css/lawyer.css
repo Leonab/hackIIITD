@@ -1,0 +1,150 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+
+/*Header part*/
+
+.header {
+    height: 100%;
+    height: 90%;
+    background-color: white;
+}
+
+a {
+    font-family: 'Lato', sans-serif;
+}
+
+.logo {
+    height: 60px;
+}
+
+.navbar.navbar-fixed-top {
+    border-bottom: 5px solid #FF1B06;
+    min-height: 80px;
+}
+
+.navbar-fixed-top {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+}
+
+.nav-bar {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.links {
+    float: right;
+    margin-top: 25px;
+}
+
+.navbar-header .navbar-brand {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.intro {
+    margin-top: 100px;
+    height: 45%;
+}
+
+.container {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.notif {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    display: table;
+    height: 100%;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+}
+
+.notif-content {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    font-size: 12px;
+}
+
+.data {
+    border-right: 1px solid grey;
+    height: 100%;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+}
+
+
+.graph-area {
+    height: 100%;
+    border-right: 1px solid grey;
+}
+
+.graph-fig {
+    padding-top: 40px;
+    height: 70%;
+}
+
+.graph-info {
+    margin-top: 40px;
+    height: 30%;
+}
+
+.info {
+    display: table;
+    height: 100%;
+}
+
+.info-area {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.intro-body {
+    height: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*overflow-y: scroll;*/
+}
+
+.new-msg {
+    padding: 0 20px;
+    height: 200px;
+    background-color: #EF2AD;
+}
+
+.old-msg {
+    background-color: #E2F2EC;
+    margin-top: 5px;
+    padding: 0 20px;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+/*End portion*/
+
+.footer {
+    /*height: 100px;*/
+    background-color: #EDEDED;
+    font-size: 10px;
+    bottom: -160px;
+    position: relative;
+}
+
+.end {
+    padding: 30px 0;
+}
+
+.social-links-bottom {
+    float: right;
+}
