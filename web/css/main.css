@@ -2,14 +2,123 @@ html,
 body {
     height: 100%;
     width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+
+/*Header part*/
+
+.header {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+}
+
+a {
+    font-family: 'Lato', sans-serif;
+}
+
+.logo {
+    height: 60px;
 }
 
 .navbar.navbar-fixed-top {
-	border-bottom: 5px solid orange;
+    border-bottom: 5px solid #FF2B06;
+    min-height: 80px;
+}
+
+.navbar-fixed-top {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+}
+
+.nav-bar {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.links {
+    float: right;
+    margin-top: 25px;
+}
+
+.btn-default:hover,
+.dropdown-toggle.btn-default:hover {
+    background-color: #FF2B06;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open>.dropdown-toggle.btn-default {
+    color: white;
+}
+
+.links.btn {
+    min-width: 60px;
+}
+
+.navbar-header .navbar-brand {
+    font-weight: 800;
+    font-size: 25px;
 }
 
 .intro {
-	height: 80%;
-	background-color: green;
-	margin-top: 30px;
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+.left {
+    background-color: #FECCCC;
+    height: 90%;
+    padding-left: 84px;
+    padding-top: 100px;
+    overflow: scroll;
+}
+
+.checkbox {
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+}
+
+.radio label, .checkbox label {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.nav .tabs-left {
+    ba
+    border-right: 0;
+}
+
+@media (min-width: 992px)
+.col-md-6 {
+    width: 33%;
+}
+
+.right {
+    background-color: #B4F6E5;
+    height: 90%;
+    padding-top: 100px;
+}
+
+/*End portion*/
+
+.footer {
+    /*height: 100px;*/
+    background-color: #EDEDED;
+    font-size: 10px;
+}
+
+.end {
+    padding: 30px 0;
+}
+
+.social-links-bottom {
+    float: right;
 }
