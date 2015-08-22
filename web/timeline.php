@@ -35,19 +35,28 @@
 
         <div class="container intro">
             <ul class="timeline">
-        <li>
-          <div class="timeline-badge warning"><i class="glyphicon"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">rjsfcj jsf jsxv jsdfx</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 23 Aug, 2015</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>jdascbkjdsc kjsskj  swjvm jvljsklsjnks.</p>
-            </div>
-          </div>
-        </li>
-        <li class="timeline-inverted">
+          <?php
+            $url = "http://manrajsingh.in/hackathon/v1/department/taskscase?case_id=" . $_GET['case_id'];
+            $json = file_get_contents($url);
+            $json_data = json_decode($json, true);
+            foreach($json_data as $val)
+            {
+              ?>
+                <li <?php if ($val['requirements'] == null) echo "class=\"timeline-inverted\""; ?>>
+                  <div class="timeline-badge warning"><i class="glyphicon"></i></div>
+                  <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> <?php echo date('m/d/Y', $val['deadline']); ?></small></p>
+                  </div>
+                  <div class="timeline-body">
+                    <p><?php echo $val['requirements']; ?></p>
+                  </div>
+                </div>
+                </li>
+              <?php
+            }
+          ?>
+        <!--<li class="timeline-inverted">
           <div class="timeline-badge danger"><i class="glyphicon"></i></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
@@ -58,19 +67,7 @@
               <p>kcj djks sjv kjs skj sds.</p>
             </div>
           </div>
-        </li>
-        <li class="timeline-inverted">
-          <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-          <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">wsdk swkjnc kwdsnk ,sk</h4>
-              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 22 Aug, 2015</small></p>
-            </div>
-            <div class="timeline-body">
-              <p>kcj djks sjv kjs skj sds.</p>
-            </div>
-          </div>
-        </li>
+        </li>-->
     </ul>
     	</div>
     </div>
