@@ -111,25 +111,24 @@ a {
 }
 
 .intro-body {
-    background-color: #F6F0F1;
     height: 70%;
     margin-top: 20px;
-    border-top: 1px solid blue;
     margin-bottom: 20px;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 
 .new-msg {
     padding: 0 20px;
-    height: 20%;
-
+    height: 200px;
+    background-color: #EF2AD;
 }
 
 .old-msg {
-    background-color: grey;
+    background-color: #E2F2EC;
     margin-top: 5px;
     padding: 0 20px;
     overflow-y: scroll;
+    height: 200px;
 }
 
 /*End portion*/
@@ -138,6 +137,8 @@ a {
     /*height: 100px;*/
     background-color: #EDEDED;
     font-size: 10px;
+    bottom: -160px;
+    position: relative;
 }
 
 .end {
