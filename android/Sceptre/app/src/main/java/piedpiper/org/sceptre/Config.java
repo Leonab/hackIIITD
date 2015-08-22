@@ -11,6 +11,8 @@ public class Config {
     public static RestAdapter getRestAdapter() {
         return  new RestAdapter.Builder()
                 .setEndpoint(WEB_SERVICES_HOST)
+                .setLogLevel(RestAdapter.LogLevel.FULL)
+
                 .build();
     }
 }

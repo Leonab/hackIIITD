@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import piedpiper.org.sceptre.async.CourtServiceAddCase;
 import piedpiper.org.sceptre.async.CourtServiceGetAllCases;
 import piedpiper.org.sceptre.async.CourtServiceProviderInvoker;
 
@@ -22,12 +23,13 @@ public class Login extends ActionBarActivity {
             Runnable runnable = new Runnable() {
                 @Override
                 public void run() {
-                    CourtServiceGetAllCases courtServiceGetAllCases = new CourtServiceGetAllCases(Login.this);
-                    courtServiceGetAllCases.execute();
+//                    CourtServiceGetAllCases courtServiceGetAllCases = new CourtServiceGetAllCases(Login.this);
+//                    courtServiceGetAllCases.execute();
                 }
             };
             new Thread(runnable).start();
-
+            CourtServiceAddCase addCase = new CourtServiceAddCase(this);
+            addCase.execute("This case needs review","The latest status of the case","1","1","0");
 
 //            CourtServiceProviderInvoker courtServiceProviderInvoker = new CourtServiceProviderInvoker(this);
 //            courtServiceProviderInvoker.execute();

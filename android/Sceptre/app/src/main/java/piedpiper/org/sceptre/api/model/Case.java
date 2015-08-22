@@ -10,6 +10,15 @@ package piedpiper.org.sceptre.api.model;
         private int lawyer_id;
         private int  department_id;
         private String lastStatus;
+        private int status;
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public int getId() {
         return id;
